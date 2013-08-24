@@ -1,0 +1,80 @@
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<dynamic>
+@using Nancy
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Nancy.Demo.Async</title>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="@Url.Content("~/content/bootstrap.css")" rel="Stylesheet" />
+    <link href="@Url.Content("~/content/default.min.css")" rel="Stylesheet" />
+
+    <script src="@Url.Content("~/content/scripts/jquery.min.js")"></script>
+    <script src="@Url.Content("~/content/scripts/highlight.min.js")"></script>
+    <script src="@Url.Content("~/content/scripts/bootstrap.js")"></script>
+
+    <script>
+        $(document).ready(function () {
+            hljs.tabReplace = '    ';
+            hljs.initHighlightingOnLoad();
+        });
+    </script>
+
+    <style type="text/css">
+        body {
+            padding-top: 60px;
+            padding-bottom: 40px;
+        }
+
+        #resize {
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="@Url.Content("~/")">Nancy.Demo.Async</a>
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li><a href="@Url.Content("~/")">Home</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="hero-unit">
+            <h1>Nancy.Demo.Async</h1>
+
+            <p>This repository shows the syntax required for async routes in Nancy and a small example of using async/await in Nancy.</p>
+
+            <p><strong>24th August 2013</strong> - This is currently referencing Nancy master branch as the async code in Nancy has not bee release to NuGet yet.</p>
+        </div>
+        <div id="resize">
+            <h2>Lets resize this beast of an image!</h2>
+            <p><small>(Scroll Down For Result)</small></p>
+            <img src="/Content/nancy-logo.png" />
+            <form method="POST">
+                <input type="submit" value="Resize" />
+            </form>
+            @if (Model != null)
+            {
+                <h3>This is our resized image</h3>
+                <img src="@Model.ResizePath"/>
+            }
+        </div>
+    </div>
+</body>
+</html>
