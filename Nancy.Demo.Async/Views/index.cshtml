@@ -63,16 +63,13 @@
             <p><strong>24th August 2013</strong> - This is currently referencing Nancy master branch as the async code in Nancy has not bee release to NuGet yet.</p>
         </div>
         <div id="resize">
-            <h2>Lets resize this beast of an image!</h2>
-            <p><small>(Scroll Down For Result)</small></p>
-            <img src="/Content/nancy-logo.png" />
+            <h2>Lets go and get a QR code!</h2>
             <form method="POST">
-                <input type="submit" value="Resize" />
+                <input type="submit" value="Get QR Code Async Style" />
             </form>
             @if (Model != null)
             {
-                <h3>This is our resized image</h3>
-                <img src="@Model.ResizePath"/>
+                <img alt="QR Code" src="@Model.QrPath"/>
             }
         </div>
     </div>
