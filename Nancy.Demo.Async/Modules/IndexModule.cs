@@ -27,7 +27,7 @@
                     "https://mutationevent-qr-code-generator.p.mashape.com/generate.php?content=http://www.nancyfx.org&type=url", ct);
 
             var stringContent = await response.Content.ReadAsStringAsync();
-
+            ct.ThrowIfCancellationRequested();
             dynamic model = JsonObject.Parse(stringContent);
 
             return model["image_url"];
