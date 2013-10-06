@@ -1,7 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nancy.Demo.Async", "src/Nancy.Demo.Async\Nancy.Demo.Async.csproj", "{E945E104-2687-4637-AE33-6EECBF157E8B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nancy.Demo.Async", "src\Nancy.Demo.Async\Nancy.Demo.Async.csproj", "{E945E104-2687-4637-AE33-6EECBF157E8B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{7D8CF371-08D0-4AFD-B6D7-4F13F8B8A22C}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
